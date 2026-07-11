@@ -55,24 +55,32 @@ body {
 }
 
 /* စာမျက်နှာ တစ်ရွက်ချင်းစီ၏ ပုံစံ */
+/* စာမျက်နှာ တစ်ရွက်ချင်းစီ၏ ပုံစံ (အတွင်းဘောင်ပါဝင်သည်) */
 .my-page {
     background-color: #ffffff;
-    border: 1px solid #ccc;
-    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.1);
+    /* အနားကွပ် ဘောင်အလှ ထည့်ခြင်း */
+    border: 4px double #b3c0d1; 
+    border-radius: 5px;
+    box-shadow: inset -5px 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* မျက်နှာဖုံးနှင့် ကျောဖုံး အရောင် */
+/* မျက်နှာဖုံးနှင့် ကျောဖုံး အရောင် (အတွင်းဘောင်ပါဝင်သည်) */
 .cover {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
     text-align: center;
     justify-content: center !important;
+    
+    /* မျက်နှာဖုံးအတွက် အတွင်းဘောင်အလှ */
+    border: none;
+    outline: 2px solid rgba(255, 255, 255, 0.5); /* အဖြူရောင် မှိန်မှိန်ဘောင် */
+    outline-offset: -15px; /* ဘောင်ကို အတွင်းဘက်သို့ ၁၅ ပစ်ဆယ် ရွှေ့ထားခြင်း */
+    position: relative;
 }
-
 .cover h1,
 .cover h2 {
     margin-bottom: 15px;
@@ -137,18 +145,23 @@ body {
     align-items: center;
 }
 
+/* ခလုတ် Link ပုံစံ */
 .btn-link {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 20px;
     background-color: #ff6b6b;
     color: white;
     text-decoration: none;
     border-radius: 20px;
     font-weight: bold;
     transition: background 0.3s;
-    width: 80%;
-    max-width: 200px;
-    font-size: 14px;
+    
+    /* စာသားကျော်မထွက်စေရန် ပြင်ဆင်ထားသော အပိုင်း */
+    width: 90%; 
+    max-width: 250px;
+    word-wrap: break-word; /* စာရှည်လျှင် အောက်တစ်ကြောင်း အလိုအလျောက် ဆင်းမည် */
+    white-space: normal;
+    text-align: center;
 }
 
 .btn-link:hover {
