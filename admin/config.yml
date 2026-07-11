@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main # သင့် GitHub ၏ အဓိက Branch နာမည်
+
+media_folder: "images" # ပုံတွေကို images folder ထဲမှာ သိမ်းမည်
+public_folder: "images" # ဝဘ်ဆိုက်တွင် ပြမည့် ပုံများ၏ လမ်းကြောင်း
+
+collections:
+  - name: "menu"
+    label: "Menu Pages (စာမျက်နှာများ)"
+    folder: "data/menu" # ပြင်လိုက်တဲ့ စာတွေကို ဒီထဲမှာ သိမ်းမယ်
+    create: true # စာမျက်နှာသစ် ထပ်တိုးခွင့်ပြုမည်
+    format: "json" # အချက်အလက်များကို JSON ဖိုင်အဖြစ် သိမ်းမည်
+    fields:
+      - {label: "အစဉ်လိုက်နံပါတ် (ဥပမာ - 01)", name: "order", widget: "number"}
+      - {label: "ခေါင်းစဉ် (Title)", name: "title", widget: "string"}
+      - {label: "ပုံ (Image/GIF)", name: "image", widget: "image"}
+      - {label: "စာသား (Description)", name: "description", widget: "text"}
+      - {label: "Link စာသား (ဥပမာ - အသေးစိတ်ကြည့်ရန်)", name: "link_text", widget: "string", required: false}
+      - {label: "Link URL (ဥပမာ - https://...)", name: "link_url", widget: "string", required: false}
