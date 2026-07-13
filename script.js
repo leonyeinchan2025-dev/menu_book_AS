@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="viber://chat?number=959123456789" class="btn-link myanmar-text viber-btn">Viber သို့ ဆက်သွယ်ရန်</a>
                         </div>
                         <div class="footer">The End</div>
+                       
+<div class="footer">
+    <a href="/admin" target="_blank" style="color: inherit; text-decoration: none;">AI GURU</a>
+</div>
                     </div>
                 </div>
             `;
